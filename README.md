@@ -14,7 +14,7 @@ https://hub.docker.com/r/marpteam/marp-cli/
 
 ### Compile Marp with cli tool
 ```Bash
-marp -w --html ./slides.md
+marp -w --html ./slides.md --theme-set ./css/neobeam.css --theme ./css/neobeam-csek.css
 ```
 [Install cli tool](https://github.com/marp-team/marp-cli?tab=readme-ov-file#install)
 
