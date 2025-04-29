@@ -202,4 +202,4 @@ footer: '**Michael Stenz**
 
 ---
 
-# I use gento btw.
+# I use gentoo btw.
