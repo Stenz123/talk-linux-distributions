@@ -21,7 +21,7 @@ jobs:
       - name: Build presentation to HTML
         uses: docker://marpteam/marp-cli:v3.4.0
         with:
-          args: --html ./slides.md --theme-set ./css/neobeam.css --theme ./css/neobeam-csek.css -o build/index.html
+          args: --html --theme-set ./css/neobeam.css --theme ./css/neobeam-csek.css -o build/index.html ./slides.md
         env:
           MARP_USER: root:root
 

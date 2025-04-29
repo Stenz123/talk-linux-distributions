@@ -24,11 +24,19 @@ footer: '**Michael Stenz**
 
 ---
 
+# **Was ist eine Distribution?**
+
+---
+
+![bg 70%](img/eis.png)
+
+---
+
 <!-- header: 'Was ist eine Distribution?' -->
 
 - Linux Geschmacksrichtung
 - Kernel Gemeinsam
-- Der rest ist austauschbar
+- Der Rest ist austauschbar
 - Fokus: user-friendly, user-centric, commercial
 
 ![bg right:40% 150%](img/desktop-env.png)
@@ -63,7 +71,7 @@ footer: '**Michael Stenz**
 
 # **Debian (1993)**
   - Package manager: **dpkg** (APT)
-  - Repositories:
+  - Sehr stabil
   - 2GB / 10 GB (Desktop/!Desktop)
 
 ![f-right](img/debian.png)
@@ -112,6 +120,13 @@ footer: '**Michael Stenz**
 
 ---
 
+<!-- header: '' -->
+# **Linux vs Windows tested in 10 games - Linux 17% faster on Average**
+[source](https://video.hardlimit.com/w/uZGK12oU5FeSsy8CDLP4hD)
+
+![bg right 100%](img/gaminggg.png)
+
+---
 
 <!-- header: 'Fedora' -->
 # **Fedora (2003)**
@@ -124,10 +139,10 @@ footer: '**Michael Stenz**
 
 ---
 
-<!-- header: 'Other Major Distros' -->
-# **openSUSE (2005)**
-- Zielgruppe: Entwickler und Unternehmen
-- Varianten: Leap (stabil) & Tumbleweed (Rolling Release)
+<!-- header: 'OpenSUSE' -->
+# **OpenSUSE (2005)**
+- Cooles logo
+- Packages werden gut durchgetestet
 - Konfigurationswerkzeug: **YaST**
 - Package manager: **zypper**
 
@@ -135,25 +150,90 @@ footer: '**Michael Stenz**
 
 ---
 
-<!-- header: 'Other Major Distros' -->
+<!-- header: 'NixOS' -->
 # **NixOS (2003)**
-- Deklarative Konfiguration (=> einfach reproduzierbar)
+- Deklarative Konfiguration (=> Einfach reproduzierbar)
 - Einfache Rollbacks
 - Package manager: **nix**
-- Innovativer Ansatz für Paketmanagement und Updates
 
 ![f-right](img/nix.png)
 
 ---
 
-<!-- header: 'Other Major Distros' -->
+<!-- header: 'NixOS Network Configuration' -->
+
+```
+{...}: {
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+    publish = {
+      enable = true;
+      addresses = true;
+      domain = true;
+      hinfo = true;
+      userServices = true;
+      workstation = true;
+    };
+  };
+
+  networking = {
+    networkmanager.enable = true;
+    firewall.enable = true;
+  };
+
+  services.mullvad-vpn.enable = true;
+
+  programs.ssh.startAgent = true;
+
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+        Enable = "Source,Sink,Media,Socket";
+      };
+    };
+  };
+}
+```
+
+---
+
+<!-- header: 'Gentoo' -->
 # **Gentoo (2000)**
-- Quellcodebasierte Distribution
+- Source-Based Distro
 - Extrem anpassbar
 - Nutzer kompiliert Pakete selbst (Performance-Optimierung)
 - Package manager: **Portage**
 
 ![f-right](img/gentoo.png)
+
+---
+
+<!-- header: 'Gentoo make.conf example' -->
+```
+COMMON_FLAGS="-march=native -O2 -pipe"
+
+USE="wayland -X iptables dist-kernel zsh-completion networkmanager vaapi \
+     dbus -elogind pipewire alsa -kde -qt3 -qt4 -qt3support tray"
+
+MAKEOPTS="--jobs 8 --load-average 9"
+
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"
+FCFLAGS="${COMMON_FLAGS}"
+FFLAGS="${COMMON_FLAGS}"
+
+L10N="de en en-GB en-US"
+
+VIDEO_CARDS="intel nvidia"
+
+LC_MESSAGES=C.utf8
+
+ACCEPT_KEYWORDS="~amd64"
+```
 
 ---
 
@@ -163,6 +243,8 @@ footer: '**Michael Stenz**
 - LineageOS
 - ChromeOS
 - ...
+
+![f-right](./img/android.png)
 
 ---
 
@@ -186,9 +268,9 @@ footer: '**Michael Stenz**
 
 ## **Faktoren:**
 - LTS-Release <---> Rolling Release
-- Bloated <---> Blank Slate
+- Bloated <---> Minimal
 - Security <---> Convenience
-- In Control <---> Delegation
+- Control <---> Guided
 
 - Skill level
 
