@@ -11,16 +11,16 @@ footer: '**Michael Stenz**
 <!-- _class: title -->
 
 # Linux Distributions
-## Expedition into the linux distro jungle
+## Introduction into the linux distro jungle
 ![logo tux tux](img/distro-tux.png)
 
 ---
 
-![bg 80%](img/statistic.png)
+![bg 70%](img/overview.png)
 
 ---
 
-![bg 70%](img/overview.png)
+![bg 80%](img/statistic.png)
 
 ---
 
@@ -72,7 +72,7 @@ footer: '**Michael Stenz**
 # **Debian (1993)**
   - Package manager: **dpkg** (APT)
   - Sehr stabil
-  - 2GB / 10 GB (Desktop/!Desktop)
+  - 400MB / 3GB (!Desktop/Desktop)
 
 ![f-right](img/debian.png)
 
@@ -94,6 +94,7 @@ footer: '**Michael Stenz**
 - Minimalistische Distro
 - Package manager: **pacman** (AUR)
 - Alles wird selbst installiert und konfiguriert
+- 400MB
 
 ![f-right](img/arch.png)
 
@@ -131,6 +132,7 @@ footer: '**Michael Stenz**
 <!-- header: 'Fedora' -->
 # **Fedora (2003)**
 - Gesponsert von Red Hat
+- RedHat upstream
 - Sehr aktuell, experimentell
 - Package manager: **dnf**
 - Fokus: Entwickler und neue Technologien
@@ -139,8 +141,8 @@ footer: '**Michael Stenz**
 
 ---
 
-<!-- header: 'OpenSUSE' -->
-# **OpenSUSE (2005)**
+<!-- header: 'openSUSE' -->
+# **openSUSE (2005)**
 - Cooles logo
 - Packages werden gut durchgetestet
 - Konfigurationswerkzeug: **YaST**
@@ -253,14 +255,12 @@ ACCEPT_KEYWORDS="~amd64"
 - Nordkoreanisches Linux
 - UNSERE DATEN
 
-## **TempleOS**
-- Von Terry A. Davis entwickelt
-- Heilig
+## **Suicide Linux**
+- Incorrect commands get converted to `rm -rf /`
 
 ## **UwUntu**
 - UwU
 
-![f-right](img/templeos.png)
 
 ---
 
@@ -271,8 +271,7 @@ ACCEPT_KEYWORDS="~amd64"
 - Bloated <---> Minimal
 - Security <---> Convenience
 - Control <---> Guided
-
-- Skill level
+- Skill level <---> Skill issue
 
 ---
 
